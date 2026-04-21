@@ -1,6 +1,6 @@
 # python_projects
 
-Early-stage Python projects demonstrating logic and algorithmic thinking
+Early-stage Python projects demonstrating logic and algorithmic thinking.
 This repository contains some of my initial programming projects, developed to build a strong foundation in Python and problem-solving.
 The projects focus on logical thinking, user interaction, and applying core programming concepts.
 
