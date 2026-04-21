@@ -2,9 +2,9 @@ from random_word import RandomWords
 from wordfreq import zipf_frequency
 r = RandomWords()
 playagain=""
+print("Lets play wordl!\nThe word is 5 alphabets long,\n🟩 Indicates that the alphabet is correct and in the right place,\n🟨 Indicates that the alphabet is in the word but in the wrong place,\n⬜️ Indicates that the alphabet is not in the word at all.\nYou get 7 attempts to guess the word!")
 while playagain!="n":
     word=""
-    print("Lets play wordl!\nThe word is 5 alphabets long,\n🟩 Indicates that the alphabet is correct and in the right place,\n🟨 Indicates that the alphabet is in the word but in the wrong place,\n⬜️ Indicates that the alphabet is not in the word at all.\nYou get 7 attempts to guess the word!")
     while not word or len(word)!=5 or zipf_frequency(word, 'en')<=0:
         word = r.get_random_word()
     guess=""
