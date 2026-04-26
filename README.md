@@ -14,3 +14,6 @@ A text-based implementation of the Wordle game with feedback on guesses.
 
 ### 3. Electronic Configuration Calculator
 Calculates the electronic configuration of an element based on its atomic number.
+
+### 4. Machine Learning Regression Model
+Work in progress.
