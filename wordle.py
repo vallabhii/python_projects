@@ -45,7 +45,7 @@ while playagain!="n":
         playagain=input("Would you like to play again? Enter \'y\' for yes and \'n\' for no: ")
         if playagain=="y":
             a=1
-        elif  or playagain=="n":
+        elif playagain=="n":
             a=1
             print("Thank you for playing wordle! Hope you had fun.")
         else:
