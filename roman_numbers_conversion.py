@@ -13,7 +13,7 @@ while playagain.lower()=="y":
             if b[i] not in c:
                 print(b[i], " does not exist in the roman number system.")
             elif len(b)-i>1 and b[i] in list(valid_sub.keys()) and b[i+1] in c and b[i+1] not in valid_sub[b[i]] and symbols[b[i]]<symbols[b[i+1]]:
-                print("I can be subtracted  from V and X, X can be subtracted from L and C and, C can be subtracted from D and M.\nSo, ",b[i-1]," cannot be subtracted from ",b[i],".")
+                print("I can be subtracted  from V and X, X can be subtracted from L and C and, C can be subtracted from D and M.\nSo, ",b[i]," cannot be subtracted from ",b[i+1],".")
             elif i>=2 and b[i-1] in c and b[i-2] in c and symbols[b[i-1]]<symbols[b[i]] and symbols[b[i-2]]<=symbols[b[i-1]]:
                 print("You cannot subtract two numbers from one number.")
             elif len(b)-i>=4 and [b[i+1],b[i+2],b[i+3]]==[b[i],b[i],b[i]]:
@@ -43,4 +43,4 @@ while playagain.lower()=="y":
             print("Thank you for using the roman number conversion program, Hope you enjoyed!")
             break
         else:
-            print("Please enter a valid respone.")
+            print("Please enter a valid response.")
