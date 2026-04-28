@@ -18,7 +18,7 @@ while playagain.lower()=="y":
                 print("You cannot subtract two numbers from one number.")
             elif len(b)-i>=4 and [b[i+1],b[i+2],b[i+3]]==[b[i],b[i],b[i]]:
                 print("Each symbol cannot be used more than 3 times consecutively.\nYou used ",b[i]," more than 3 times consecutively")
-            elif len(b)-i>=2 and b[i] in ["V","L","D"] and b[i+1] in c and b[i]==b[i+1]:
+            elif b[i] in ["V","L","D"] and b[i+1] in c and b.count(b[i])>1:
                 print("V, L and D cannot be repeated")
             elif len(b)-i>=2 and b[i] in ["V","L","D"] and b[i+1] in c and symbols[b[i]]<symbols[b[i+1]]:
                 print("V, L and D cannot be subtracted")
