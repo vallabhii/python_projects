@@ -1,9 +1,6 @@
 symbols={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
 subs={"IV":4,"IX":9,"XL":40,"XC":90,"CD":400,"CM":900}
-thousands=0
-hundereds=0
-tens=0
-ones=0
+hundereds_sub,tens_sub,ones_sub=False,False,False
 int_num_list=[]
 invalid_rom_num=False
 a=input("Enter roman number")
@@ -27,8 +24,12 @@ if invalid_rom_num==False:
                 rom_num_list.pop(j-1)
                 rom_num_values.pop(j-1)
                 j-=1
+                if rom_num_values[j]<10:
+                    ones_sub=True
+                elif rom_num_values[j]<100:
+                    tens_sub=True
+                elif rom_num_values[j]<1000:
+                    hundereds_sub=True
             else:
                 invalid_rom_num=True
-        if i<=len(rom_num_values)-2 and rom_num_values[j-1]==rom_num_values[j] and rom_num_values[j]==rom_num_values[j+1]:
-            if rom_num_values[j] in ["I","X","C","M"]:
                 
