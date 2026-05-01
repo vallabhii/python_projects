@@ -51,7 +51,7 @@ while runagain=="y":
                 hundreds+=1
             elif rom_num_values[j]==1000:
                 thousands+=1
-        if (ones_sub and ones>1) or (tens_sub and tens>1) or (hundereds_sub and hundereds>1):
+        if (ones_sub and ones>1) or (tens_sub and tens>1) or (hundreds_sub and hundreds>1):
             invalid_rom_num=True
         elif ones>3 or tens>3 or hundreds>3 or thousands>3:
             invalid_rom_num=True
