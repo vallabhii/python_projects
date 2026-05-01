@@ -3,7 +3,7 @@ subs={"IV":4,"IX":9,"XL":40,"XC":90,"CD":400,"CM":900}
 runagain="y"
 while runagain=="y":
     hundreds_sub,tens_sub,ones_sub=False,False,False
-    ones,tens,hundreds,thousands=0,0,0,0
+    ones,fives,tens,fifties,hundreds,fivehundreds,thousands=0,0,0,0,0,0,0
     int_num_list=[]
     invalid_rom_num=False
     a=input("Enter roman number: ")
@@ -38,22 +38,27 @@ while runagain=="y":
                 else:
                     invalid_rom_num=True
                     break
-            elif rom_num_values[a-1]==rom_num_values[a] and rom_num_values in [5,50,500]:
-                invalid_rom_num=True
-                break
     if invalid_rom_num==False:               
         for j in range(len(rom_num_values)):
-            if rom_num_values[j]<10:
+            if rom_num_values[j]==1:
                 ones+=1
-            elif rom_num_values[j]<100:
+            elif rom_num_values[j]==5:
+                fives+=1
+            elif rom_num_values[j]==10:
                 tens+=1
-            elif rom_num_values[j]<1000:
+            elif rom_num_values[j]==50:
+                fifties+=1
+            elif rom_num_values[j]==100:
                 hundreds+=1
+            elif rom_num_values[j]==500:
+                fivehundreds+=1
             elif rom_num_values[j]==1000:
                 thousands+=1
         if (ones_sub and ones>1) or (tens_sub and tens>1) or (hundreds_sub and hundreds>1):
             invalid_rom_num=True
-        elif ones>3 or tens>3 or hundreds>3 or thousands>3:
+        elif (ones>3 and fives!=1) or (tens>3 and fifties!=1) or (hundreds>3 and fivehundreds!=1) or thousands>3:
+            invalid_rom_num=True
+        elif fives>1 or fifties>1 or fivehundreds>1:
             invalid_rom_num=True
     if invalid_rom_num==True:
         print("Invalid roman number, please try again.")
