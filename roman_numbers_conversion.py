@@ -1,7 +1,7 @@
 symbols={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000}
 subs={"IV":4,"IX":9,"XL":40,"XC":90,"CD":400,"CM":900}
 hundereds_sub,tens_sub,ones_sub=False,False,False
-ones,tens,hundereds=0,0,0
+ones,tens,hundereds,thousands=0,0,0,0
 int_num_list=[]
 invalid_rom_num=False
 a=input("Enter roman number")
@@ -38,7 +38,6 @@ if invalid_rom_num==False:
                 invalid_rom_num=True
                 a=length-1
                 break
-    
 if invalid_rom_num==False:               
     for j in range(len(rom_num_values)):
         if rom_num_values[j]<10:
@@ -47,7 +46,11 @@ if invalid_rom_num==False:
             tens+=1
         elif rom_num_values[j]<1000:
             hundereds+=1
+        elif rom_num_values==1000:
+            thousands+=1
     if (ones_sub and ones>1) or (tens_sub and tens>1) or (hundereds_sub and hundereds>1):
+        invalid_rom_num=True
+    elif ones>3 or tens>3 or hundereds>3 or thousands>3:
         invalid_rom_num=True
 if invalid_rom_num==False:
     print(sum(rom_num_values))
