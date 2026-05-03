@@ -14,3 +14,6 @@ A text-based implementation of the Wordle game with feedback on guesses.
 
 ### 3. Electronic Configuration Calculator
 Calculates the electronic configuration of an element based on its atomic number.
+
+### 4. Roman Number to Integer Calculator
+Validates a given roman number and calculates it's integer value. (Work in progress)
